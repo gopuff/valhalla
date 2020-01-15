@@ -17,7 +17,10 @@ else
 fi
 
 docker build -f Dockerfile-${build} \
-  --tag valhalla/docker:${build}-${tag} \
+  --tag gopuff/valhalla:${build}-${tag} \
   --no-cache \
   --force-rm \
   .
+
+docker tag gopuff/valhalla:${build}-${tag} gopuff.azurecr.io/valhalla:${build}-${tag}
+docker push gopuff.azurecr.io/valhalla:${build}-${tag}
