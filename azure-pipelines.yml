@@ -13,5 +13,5 @@ steps:
 - script: docker info
   displayName: 'Get the docker info to prove we are on the agent'
 
-- script: ./build.sh
+- script: ./build.sh ppa
   displayName: 'Run the script in the project'
